@@ -4,85 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Omnia Control Inc. | Fumigación Certificada en Ciudad de Panamá</title>
-  <meta name="description" content="Omnia Control Inc. — Empresa certificada por autoridades panameñas. Fumigación y control de plagas para casas, restaurantes, hoteles, hospitales, bodegas, contenedores y más. Atención en Ciudad de Panamá.">
+  <meta name="description" content="Empresa certificada en control de plagas. Fumigación para hogares, restaurantes, hoteles, hospitales, bodegas, plantas de alimentos, granos y contenedores en Ciudad de Panamá.">
   <link rel="icon" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Omnia Control Inc. | Fumigación en Panamá">
-  <meta property="og:description" content="Fumigación profesional certificada en Ciudad de Panamá. Atención a hogares e industrias. Cotiza por WhatsApp.">
-  <meta property="og:image" content="logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://omniacontrol.com">
-
   <style>
     :root{
       --rojo:#d32f2f; --rojo-osc:#b71c1c; --dorado:#d4a43a;
-      --gris:#f4f4f6; --osc:#1f1f1f; --blanco:#fff;
-      --radius:16px;
+      --dorado-osc:#b08122; --gris:#f4f4f6; --blanco:#fff;
+      --osc:#1f1f1f; --radius:16px;
     }
-    *{box-sizing:border-box} html,body{margin:0}
-    body{font-family:Poppins,system-ui,Segoe UI,Roboto,sans-serif;color:#333;background:var(--gris);}
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Poppins,system-ui,Segoe UI,Roboto,sans-serif;background:var(--gris);color:#333;scroll-behavior:smooth}
 
-    /* NAV */
-    .topbar{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(6px);
-      background:rgba(255,255,255,.9); border-bottom:1px solid #eee;
-    }
-    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;gap:20px;padding:10px 16px;}
-    .nav img{height:44px}
-    .nav .brand{font-weight:700;color:var(--rojo-osc);letter-spacing:.3px}
-    .nav .links{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
-    .nav a{color:var(--rojo-osc);text-decoration:none;font-weight:600}
-    .nav a:hover{color:#000}
+    /* NAVBAR */
+    .topbar{position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.1) blur(6px);
+      background:rgba(255,255,255,.95); border-bottom:1px solid #eee}
+    .nav{max-width:1200px;margin:auto;display:flex;align-items:center;gap:16px;padding:10px 16px}
+    .nav img{height:42px}
+    .brand{font-weight:800;color:var(--rojo-osc);letter-spacing:.3px}
+    .links{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+    .links a{color:var(--rojo-osc);text-decoration:none;font-weight:600}
+    .links a:hover{color:#000}
+    .ig-head{margin-left:8px}
+    .ig-head a{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+      color:#fff; padding:8px 12px; border-radius:999px; font-weight:700; text-decoration:none}
+    .ig-head a i{margin-right:6px}
 
     /* HERO */
-    .hero{
-      position:relative; overflow:hidden; color:#fff; text-align:center;
-      background:linear-gradient(110deg, rgba(179,2,2,.88), rgba(211,47,47,.88)), url('fumigacion-panama.jpg') center/cover no-repeat;
-    }
+    .hero{position:relative; color:#fff; text-align:center;
+      background:linear-gradient(110deg, rgba(179,2,2,.88), rgba(211,47,47,.88)), url('fumigacion-panama.jpg') center/cover no-repeat}
     .hero .wrap{max-width:1100px;margin:auto;padding:80px 18px}
-    .hero h1{font-size:clamp(26px,4vw,46px);margin:8px 0 8px}
-    .hero p{max-width:820px;margin:10px auto 24px;opacity:.95}
-    .hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{border:none;cursor:pointer;border-radius:999px;padding:12px 22px;font-weight:700;letter-spacing:.3px}
-    .btn.wsp{background:#25d366;color:#fff}
-    .btn.out{background:transparent;color:#fff;border:1.8px solid rgba(255,255,255,.8)}
+    .hero .mini-logo{height:70px; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35)); opacity:.95}
+    .hero h1{font-size:clamp(28px,4vw,46px);margin:10px 0 8px}
+    .hero p{max-width:860px;margin:10px auto 24px;opacity:.98}
     .badges{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-    .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);padding:8px 12px;border-radius:999px;font-size:.92rem;display:flex;align-items:center;gap:10px}
+    .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:8px 12px;border-radius:999px;font-size:.92rem;display:flex;align-items:center;gap:10px}
 
-    /* SECTIONS */
+    /* BUTTONS (links sin subrayado + animaciones) */
+    .btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;border-radius:999px;
+      padding:12px 22px;font-weight:800;letter-spacing:.2px;text-decoration:none; user-select:none;
+      box-shadow:0 6px 14px rgba(0,0,0,.18); transition:transform .12s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease}
+    .btn:focus{outline:2px solid rgba(255,255,255,.5); outline-offset:2px}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.22)}
+    .btn:active{transform:translateY(1px) scale(.98)}
+    .btn.wsp{background:#25d366;color:#fff}
+    .btn.out{background:transparent;color:#fff;border:1.8px solid rgba(255,255,255,.85)}
+    .btn.gold{background:linear-gradient(135deg,var(--dorado),var(--dorado-osc)); color:#fff}
+    .btn a{color:inherit; text-decoration:none}
+
     section{max-width:1200px;margin:0 auto;padding:60px 18px}
     h2.sec{color:var(--rojo-osc);text-align:center;margin:0 0 18px}
     p.sub{color:#555;text-align:center;max-width:900px;margin:0 auto 26px}
 
     /* GRID CARDS */
     .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{background:var(--blanco);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px rgba(0,0,0,.06);transition:.25s transform}
-    .card:hover{transform:translateY(-5px)}
+    .card{background:var(--blanco);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px rgba(0,0,0,.06);transition:.25s transform,.25s border,.25s box-shadow}
+    .card:hover{transform:translateY(-5px); border:1px solid var(--dorado); box-shadow:0 14px 32px rgba(212,164,58,.22)}
     .card .ico{font-size:28px;color:var(--rojo)}
     .card h3{margin:10px 0;color:var(--rojo-osc)}
-    .pill{display:inline-block;background:#ffe9e9;border-left:5px solid var(--rojo);padding:8px 12px;border-radius:10px;margin:8px 0}
+    .pill{display:inline-block;background:#fff6e6;border-left:5px solid var(--dorado);padding:8px 12px;border-radius:10px;margin:8px 0}
 
-    /* PROCESS */
-    .steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .step{background:#fff;border-radius:14px;padding:18px;display:flex;gap:12px;align-items:flex-start;border:1px dashed #eee}
-    .step .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--rojo);color:#fff;font-weight:700}
+    /* PROCESS timeline con flechas */
+    .flow{display:grid;gap:16px}
+    .step{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:flex-start; background:#fff;border-radius:14px;padding:16px;border:1px dashed #eee;position:relative}
+    .step:nth-child(odd){background:linear-gradient(0deg,#fff,#fff); border-color:#ffe3a8}
+    .step:nth-child(even){background:linear-gradient(0deg,#fff,#fff); border-color:#ffcdd2}
+    .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--dorado);color:#fff;font-weight:800}
+    .arrow{position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--dorado-osc)}
+    .step:nth-child(even) .num{background:var(--rojo)}
+    .step:nth-child(even) .arrow{color:var(--rojo-osc)}
 
-    /* TABLE PLANS */
+    /* PLANS */
     .plans{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .plan{background:#fff;border-radius:16px;padding:22px;border:2px solid #eee}
+    .plan{background:#fff;border-radius:16px;padding:22px;border:2px solid #eee; transition:.25s}
+    .plan:hover{border-color:var(--dorado); box-shadow:0 10px 30px rgba(212,164,58,.18)}
     .plan h3{margin:6px 0;color:var(--rojo-osc)}
     .price{font-size:24px;font-weight:800;color:var(--rojo)}
     .plan ul{padding-left:18px;margin:12px 0}
     .plan li{margin:8px 0}
-    .best{border-color:var(--dorado);box-shadow:0 10px 30px rgba(212,164,58,.18)}
-    .best .price{color:var(--dorado)}
+    .best{border-color:var(--dorado)}
 
     /* FAQ */
     details{background:#fff;border-radius:12px;padding:14px 18px;margin:10px 0;border:1px solid #eee}
     summary{cursor:pointer;font-weight:700;color:var(--rojo-osc)}
+    details[open]{border-color:var(--dorado)}
     details p{margin-top:8px;color:#444}
 
     /* FORM */
@@ -95,6 +103,9 @@
     .form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .hint{font-size:.9rem;color:#666}
     .infoCard{background:#fff;border-radius:18px;padding:22px;border:1px solid #eee}
+
+    /* MAP */
+    .map-wrap{background:#fff;border-radius:18px;padding:10px;border:1px solid #eee}
 
     /* FOOTER */
     footer{background:var(--rojo-osc);color:#fff;margin-top:40px}
@@ -109,6 +120,7 @@
 <!-- NAV -->
 <div class="topbar">
   <div class="nav">
+    <!-- LOGO: coloca tu archivo como logo.png en la misma carpeta -->
     <img src="logo.png" alt="Omnia Control Inc.">
     <div class="brand">Omnia Control Inc.</div>
     <div class="links">
@@ -120,13 +132,19 @@
       <a href="#cert">Certificaciones</a>
       <a href="#contacto">Contacto</a>
     </div>
+    <div class="ig-head">
+      <a href="https://instagram.com/omniacontrol" target="_blank">
+        <i class="fa-brands fa-instagram"></i> @omniacontrol
+      </a>
+    </div>
   </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <img src="logo.png" alt="Omnia Control" style="height:72px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));opacity:.95">
+    <!-- Logo en hero (opcional) -->
+    <img class="mini-logo" src="logo.png" alt="Omnia Control">
     <h1>Fumigación Certificada en Ciudad de Panamá</h1>
     <p>Soluciones profesionales para hogares, restaurantes, hoteles, hospitales, bodegas, plantas de alimentos, granos y contenedores. <b>Atención rápida, productos aprobados por autoridades y reportes listos para auditorías.</b></p>
     <div class="cta">
@@ -144,127 +162,85 @@
 <!-- SERVICIOS -->
 <section id="servicios">
   <h2 class="sec">Servicios de Fumigación y Control de Plagas</h2>
-  <p class="sub">Operamos en <b>Ciudad de Panamá</b> y áreas cercanas. Diseñamos planes a medida siguiendo metodología de <b>Manejo Integrado de Plagas (MIP)</b>: inspección, identificación, control físico/químico, prevención y seguimiento.</p>
+  <p class="sub">Operamos en <b>Ciudad de Panamá</b> y áreas cercanas. Metodología de <b>Manejo Integrado de Plagas (MIP)</b>: inspección, identificación, control físico/químico, prevención y seguimiento.</p>
   <div class="grid">
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-house"></i></div>
-      <h3>Fumigación Residencial</h3>
-      <p>Cucarachas, hormigas, mosquitos, pulgas, garrapatas, roedores y más. Tratamientos seguros para niños y mascotas (con protocolos de ventilación y reingreso).</p>
-      <div class="pill">Visita puntual o plan trimestral</div>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-store"></i></div>
-      <h3>Comercios & Restaurantes</h3>
-      <p>Control en cocinas, cámaras frías y almacenes. Documentación para <b>inspecciones sanitarias</b>, BPM y auditorías internas.</p>
-      <div class="pill">Programas mensuales con monitoreo</div>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-industry"></i></div>
-      <h3>Industrial & Alimentaria</h3>
-      <p>Plantas de proceso, molineras, empaques. Control de roedores, voladores y rastreros con estaciones cebaderas y trampas de luz monitoreadas.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-truck-ramp-box"></i></div>
-      <h3>Granos y Contenedores</h3>
-      <p>Fumigación y desinsectación en <b>granos almacenados</b> y <b>contenedores</b> para exportación/importación, con reporte y certificación de servicio.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-hospital"></i></div>
-      <h3>Áreas Sensibles</h3>
-      <p>Hospitales, clínicas y laboratorios: protocolos de bioseguridad, productos específicos y ventanas de aplicación sin afectar operaciones.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-seedling"></i></div>
-      <h3>Opciones Ecológicas</h3>
-      <p>Gel baits, trampas, control físico, exclusión y sellado. Productos de bajo impacto y biodegradables cuando la operación lo permite.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-clipboard-check"></i></div>
-      <h3>Reportes & Auditoría</h3>
-      <p>Planos con puntos de control, evidencias fotográficas, hojas de seguridad (MSDS), registro de productos y recomendaciones correctivas.</p>
-    </div>
-    <div class="card">
-      <div class="ico"><i class="fa-solid fa-bug-slash"></i></div>
-      <h3>Termitas & Maderas</h3>
-      <p>Inspección con detección de galerías, barreras químicas y tratamientos puntuales. Plan de seguimiento semestral.</p>
-    </div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-house"></i></div><h3>Fumigación Residencial</h3><p>Cucarachas, hormigas, mosquitos, pulgas, garrapatas, roedores y más. Tratamientos seguros con protocolos de ventilación y reingreso.</p><div class="pill">Visita puntual o plan trimestral</div></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-store"></i></div><h3>Comercios & Restaurantes</h3><p>Control en cocinas, cámaras frías y almacenes. Documentación para inspecciones sanitarias, BPM y auditorías.</p><div class="pill">Programas mensuales</div></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-industry"></i></div><h3>Industrial & Alimentaria</h3><p>Plantas de proceso y empaques. Estaciones cebaderas, trampas de luz y registros con bitácoras.</p></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-truck-ramp-box"></i></div><h3>Granos y Contenedores</h3><p>Fumigación de granos almacenados y desinsectación de contenedores con certificación de servicio para exportación.</p></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-hospital"></i></div><h3>Áreas Sensibles</h3><p>Hospitales, clínicas y laboratorios. Bioseguridad y productos específicos sin afectar operación.</p></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-seedling"></i></div><h3>Opciones Ecológicas</h3><p>Gel baits, trampas, exclusión y sellado. Bajo impacto ambiental.</p></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-clipboard-check"></i></div><h3>Reportes & Auditoría</h3><p>Mapas de puntos de control, MSDS, evidencias fotográficas y recomendaciones correctivas.</p></div>
+    <div class="card"><div class="ico"><i class="fa-solid fa-bug-slash"></i></div><h3>Termitas & Maderas</h3><p>Barreras químicas, perforación controlada y seguimiento semestral.</p></div>
   </div>
 </section>
 
-<!-- INDUSTRIAS -->
+<!-- INDUSTRIAS (8) -->
 <section id="industrias">
   <h2 class="sec">Industrias que Atendemos</h2>
-  <p class="sub">Adaptamos el programa a tu operación y normativa vigente en Panamá.</p>
+  <p class="sub">Programas a la medida y normativa vigente en Panamá.</p>
   <div class="grid">
     <div class="card"><h3><i class="fa-solid fa-utensils"></i> Restaurantes & Food Trucks</h3><p>BPM, control en cocina caliente/fría, manejo de grasas y puntos críticos.</p></div>
     <div class="card"><h3><i class="fa-solid fa-cart-shopping"></i> Retail & Supermercados</h3><p>Inspección perimetral, trampas de monitoreo y registros para auditor.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-hotel"></i> Hoteles</h3><p>Habitaciones, áreas comunes y cocinas; control de chinches y cucarachas alemanas.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-ship"></i> Puertos & Logística</h3><p>Contenedores, bodegas, patios. Coordinación operativa y tiempos de ventana.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-hotel"></i> Hoteles</h3><p>Habitaciones, áreas comunes; control de chinches y cucaracha alemana.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-ship"></i> Puertos & Logística</h3><p>Contenedores, bodegas, patios. Coordinación operativa y ventanas de servicio.</p></div>
     <div class="card"><h3><i class="fa-solid fa-school"></i> Escuelas & Oficinas</h3><p>Aplicaciones fuera de horario y comunicación preventiva al personal.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-hospital-user"></i> Salud</h3><p>Clínicas y laboratorios con protocolos estrictos de bioseguridad.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-warehouse"></i> Bodegas & Depósitos</h3><p>Roedores y rastreros con estaciones trazables y reportes.</p></div>
     <div class="card"><h3><i class="fa-solid fa-house-chimney"></i> Residencial & PH</h3><p>Planes para torres y conjuntos con tarifas preferenciales por volumen.</p></div>
   </div>
 </section>
 
-<!-- PROCESO -->
+<!-- PROCESO DINÁMICO -->
 <section id="proceso">
   <h2 class="sec">Nuestro Proceso (MIP)</h2>
-  <p class="sub">Metodología de <b>Manejo Integrado de Plagas</b> para soluciones duraderas y trazables.</p>
-  <div class="steps">
-    <div class="step"><div class="num">1</div><div><b>Inspección</b><br>Levantamiento de información, especies presentes, rutas de ingreso, atrayentes y riesgos.</div></div>
-    <div class="step"><div class="num">2</div><div><b>Plan de Acción</b><br>Selección de técnicas (físicas/químicas), productos, dosis y cronograma sin interrumpir tu operación.</div></div>
-    <div class="step"><div class="num">3</div><div><b>Ejecución Segura</b><br>Aplicación por técnicos certificados, señalización, barreras y protocolos de reingreso.</div></div>
-    <div class="step"><div class="num">4</div><div><b>Seguimiento</b><br>Monitoreo con trampas, bitácora de consumo y ajustes. Reporte técnico posterior a cada visita.</div></div>
+  <p class="sub">Metodología de <b>Manejo Integrado de Plagas</b> para resultados duraderos.</p>
+  <div class="flow">
+    <div class="step"><div class="num">1</div><div><b>Inspección</b><br>Levantamiento de información, especies, rutas de ingreso y riesgos.<i class="fa-solid fa-angles-right arrow"></i></div></div>
+    <div class="step"><div class="num">2</div><div><b>Plan de Acción</b><br>Selección de técnicas (físicas/químicas), productos, dosis y cronograma.<i class="fa-solid fa-angles-right arrow"></i></div></div>
+    <div class="step"><div class="num">3</div><div><b>Ejecución Segura</b><br>Aplicación por técnicos certificados, señalización y tiempos de reingreso.<i class="fa-solid fa-angles-right arrow"></i></div></div>
+    <div class="step"><div class="num">4</div><div><b>Seguimiento</b><br>Monitoreo con trampas, bitácoras y ajustes. Reporte posterior a cada visita.</div></div>
   </div>
 </section>
 
-<!-- TIPOS DE PLAGAS -->
+<!-- PLAGAS (8) -->
 <section id="plagas">
   <h2 class="sec">Plagas que Controlamos</h2>
-  <p class="sub">Identificar correctamente la especie es clave para erradicarla. Estas son las más comunes en la capital.</p>
-  <div class="grid">
-    <div class="card"><h3><i class="fa-solid fa-bug"></i> Cucaracha Alemana</h3><p>Frecuente en cocinas y áreas calientes. Uso de gel baits, trampas y saneamiento.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-spider"></i> Hormigas & Arañas</h3><p>Tratamientos perimetrales y cebos específicos según especie.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-mosquito"></i> Mosquitos</h3><p>Control de criaderos, larvicidas y nebulización espacial cuando aplica.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-shield-dog"></i> Pulgas & Garrapatas</h3><p>Protocolos para mascotas y tratamiento de zonas de descanso.</p></div>
+  <p class="sub">Identificar bien la especie es clave para erradicarla. (Diseño 3 columnas en escritorio).</p>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:18px; max-width:1100px">
+    <div class="card"><h3><i class="fa-solid fa-bug"></i> Cucaracha Alemana</h3><p>Frecuente en cocinas; gel baits, trampas y saneamiento.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-spider"></i> Hormigas & Arañas</h3><p>Perimetrales y cebos específicos según especie.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-mosquito"></i> Mosquitos</h3><p>Control de criaderos, larvicidas y nebulización puntual.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-shield-dog"></i> Pulgas & Garrapatas</h3><p>Protocolos para mascotas y zonas de descanso.</p></div>
     <div class="card"><h3><i class="fa-solid fa-shield-virus"></i> Roedores</h3><p>Estaciones cebaderas, trampas mecánicas y sellado de accesos.</p></div>
-    <div class="card"><h3><i class="fa-solid fa-tree"></i> Termitas</h3><p>Barreras químicas, perforación controlada y seguimiento semestral.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-tree"></i> Termitas</h3><p>Barreras químicas, perforación y seguimiento semestral.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-fish"></i> Moscas & Voladores</h3><p>Trampas de luz, saneamiento y manejo de residuos.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-bed"></i> Chinches de Cama</h3><p>Inspección minuciosa, tratamientos localizados y reingreso.</p></div>
   </div>
 </section>
 
 <!-- PLANES -->
 <section id="planes">
   <h2 class="sec">Planes de Servicio</h2>
-  <p class="sub">Todos incluyen reporte técnico y recomendaciones. Precios referenciales; cotizamos según metraje, plaga y complejidad.</p>
+  <p class="sub">Incluyen reporte técnico y recomendaciones. Precios referenciales; cotizamos según metraje, plaga y complejidad.</p>
   <div class="plans">
     <div class="plan">
       <h3><i class="fa-solid fa-sparkles"></i> Puntual</h3>
       <div class="price">Desde $45</div>
-      <ul>
-        <li>Visita única + reporte</li>
-        <li>Reingreso recomendado tras 7–10 días</li>
-        <li>Ideal para eventos puntuales</li>
-      </ul>
-      <a class="btn wsp" href="https://wa.me/50765127653?text=Cotizar%20servicio%20puntual%20de%20fumigaci%C3%B3n." target="_blank">Cotizar</a>
+      <ul><li>Visita única + reporte</li><li>Reingreso recomendado 7–10 días</li><li>Ideal para eventos puntuales</li></ul>
+      <a class="btn gold" href="https://wa.me/50765127653?text=Cotizar%20servicio%20puntual%20de%20fumigaci%C3%B3n." target="_blank">Cotizar</a>
     </div>
     <div class="plan best">
       <h3><i class="fa-solid fa-repeat"></i> Trimestral</h3>
       <div class="price">Desde $35/visita</div>
-      <ul>
-        <li>4 visitas/año</li>
-        <li>Monitoreo y ajustes</li>
-        <li>Preferido por residencias y oficinas</li>
-      </ul>
-      <a class="btn wsp" href="https://wa.me/50765127653?text=Cotizar%20plan%20trimestral%20de%20fumigaci%C3%B3n." target="_blank">Cotizar</a>
+      <ul><li>4 visitas/año</li><li>Monitoreo y ajustes</li><li>Preferido por residencias y oficinas</li></ul>
+      <a class="btn gold" href="https://wa.me/50765127653?text=Cotizar%20plan%20trimestral%20de%20fumigaci%C3%B3n." target="_blank">Cotizar</a>
     </div>
     <div class="plan">
       <h3><i class="fa-solid fa-calendar-check"></i> Mensual</h3>
       <div class="price">A medida</div>
-      <ul>
-        <li>12 visitas/año</li>
-        <li>Exigido en industrias y restaurantes</li>
-        <li>Documentación para auditoría</li>
-      </ul>
-      <a class="btn wsp" href="https://wa.me/50765127653?text=Cotizar%20plan%20mensual%20para%20comercio%20o%20industria." target="_blank">Cotizar</a>
+      <ul><li>12 visitas/año</li><li>Exigido en industrias y restaurantes</li><li>Documentación para auditoría</li></ul>
+      <a class="btn gold" href="https://wa.me/50765127653?text=Cotizar%20plan%20mensual%20para%20comercio%20o%20industria." target="_blank">Cotizar</a>
     </div>
   </div>
 </section>
@@ -272,69 +248,59 @@
 <!-- CERTIFICACIONES -->
 <section id="cert">
   <h2 class="sec">Certificaciones y Cumplimiento en Panamá</h2>
-  <p class="sub">Operamos bajo la regulación nacional. Contamos con <b>técnicos acreditados</b> y protocolos de bioseguridad. Emitimos reportes con <b>MSDS/hojas de seguridad</b> y registros de productos.</p>
+  <p class="sub">Técnicos acreditados, bioseguridad, MSDS/hojas de seguridad y registros de productos.</p>
   <div class="grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-certificate"></i> MINSA</h3>
-      <p>Aplicación responsable de plaguicidas con productos permitidos y rotación de ingredientes activos para evitar resistencia.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fa-solid fa-recycle"></i> AAUD</h3>
-      <p>Manejo seguro de envases y residuos, traslado y disposición según lineamientos ambientales.</p>
-    </div>
-    <div class="card">
-      <h3><i class="fa-solid fa-clipboard"></i> BPM / HACCP</h3>
-      <p>Documentación y evidencias para auditorías en industria alimentaria, con mapas de trampas y bitácoras de consumo.</p>
-    </div>
+    <div class="card"><h3><i class="fa-solid fa-certificate"></i> MINSA</h3><p>Productos permitidos y rotación de ingredientes activos para evitar resistencia.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-recycle"></i> AAUD</h3><p>Manejo seguro de envases y residuos, traslado y disposición responsable.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-clipboard"></i> BPM / HACCP</h3><p>Mapas de trampas y bitácoras de consumo para auditorías.</p></div>
   </div>
 </section>
 
-<!-- CHECKLISTS -->
+<!-- PRE / POST -->
 <section>
   <h2 class="sec">Preparación y Cuidados Posteriores</h2>
   <div class="grid">
     <div class="infoCard">
       <h3><i class="fa-solid fa-list-check"></i> Antes del servicio</h3>
-      <ul>
-        <li>Guardar utensilios y alimentos. Despejar zócalos y debajo de fregaderos.</li>
-        <li>Mascotas fuera durante la aplicación y el tiempo de ventilación.</li>
-        <li>Indicar al técnico áreas de mayor actividad de plagas.</li>
-      </ul>
+      <ul><li>Guardar utensilios y alimentos. Despejar zócalos y bajo fregaderos.</li><li>Mascotas fuera durante la aplicación y ventilación.</li><li>Indicar al técnico áreas de mayor actividad.</li></ul>
     </div>
     <div class="infoCard">
       <h3><i class="fa-solid fa-broom"></i> Después del servicio</h3>
-      <ul>
-        <li>Ventilar el área según indicaciones (usualmente 30–60 min).</li>
-        <li>No limpiar las zonas tratadas por 24–48 h para no remover el producto.</li>
-        <li>Aplicar recomendaciones de sellado y saneamiento.</li>
-      </ul>
+      <ul><li>Ventilar 30–60 min o según indicación.</li><li>No limpiar zonas tratadas por 24–48 h.</li><li>Aplicar recomendaciones de sellado y saneamiento.</li></ul>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- TESTIMONIOS (6) -->
 <section>
   <h2 class="sec">Lo que dicen nuestros clientes</h2>
   <div class="grid">
-    <div class="card"><p>“Llegaron el mismo día, explicaron todo y dejaron registro para la inspección. Desde entonces, cero cucarachas.”</p><b>— Restaurante en San Francisco</b></div>
-    <div class="card"><p>“El plan mensual nos ayudó a pasar la auditoría sin observaciones. Excelente seguimiento.”</p><b>— Planta de alimentos, Tocumen</b></div>
-    <div class="card"><p>“Trato profesional, atentos con nuestras mascotas y muy cuidadosos.”</p><b>— Residencia, Costa del Este</b></div>
+    <div class="card"><p>“Llegaron el mismo día y dejaron todo documentado para la inspección. Desde entonces, cero cucarachas.”</p><b>— José Rodríguez, San Francisco</b></div>
+    <div class="card"><p>“Pasamos la auditoría sin observaciones gracias al programa mensual y las bitácoras.”</p><b>— Ana González, Tocumen</b></div>
+    <div class="card"><p>“Muy cuidadosos con nuestras mascotas y puntuales. Recomendados.”</p><b>— Luis Martínez, Costa del Este</b></div>
+    <div class="card"><p>“Controlaron roedores en bodega en dos visitas. Seguimiento excelente.”</p><b>— María Pérez, Bethania</b></div>
+    <div class="card"><p>“Atención nocturna para no detener operaciones. Profesionales.”</p><b>— Carlos Herrera, El Cangrejo</b></div>
+    <div class="card"><p>“El plan trimestral nos funciona perfecto para el PH. Buen precio/beneficio.”</p><b>— Daniela Castillo, Parque Lefevre</b></div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ ampliado -->
 <section>
   <h2 class="sec">Preguntas Frecuentes</h2>
-  <details><summary>¿Los productos son seguros?</summary><p>Usamos formulaciones aprobadas por autoridades panameñas y seguimos las dosis indicadas por el fabricante. Indicamos tiempos de reingreso y ventilación.</p></details>
-  <details><summary>¿Cuánto dura el servicio?</summary><p>Entre 45 y 90 minutos en residencias; en industrias depende del metraje y complejidad.</p></details>
-  <details><summary>¿Garantizan el resultado?</summary><p>Sí. Nuestros planes incluyen seguimiento y reingresos cuando es necesario, según la plaga tratada.</p></details>
-  <details><summary>¿Atienden urgencias?</summary><p>Según agenda, ofrecemos respuesta acelerada y ventanas nocturnas para negocios.</p></details>
+  <details><summary>¿Los productos son seguros?</summary><p>Usamos formulaciones aprobadas por autoridades panameñas y las dosis del fabricante. Indicamos tiempos de reingreso y ventilación.</p></details>
+  <details><summary>¿Cuánto dura el servicio?</summary><p>Residencias: 45–90 min. En industrias depende del metraje y complejidad.</p></details>
+  <details><summary>¿Qué garantía ofrecen?</summary><p>Nuestros planes incluyen seguimiento y reingresos cuando corresponda según la plaga tratada.</p></details>
+  <details><summary>¿Atienden urgencias o fuera de horario?</summary><p>Sí, según agenda contamos con ventanas nocturnas y fines de semana.</p></details>
+  <details><summary>¿Qué debo preparar antes de la visita?</summary><p>Guardar alimentos/utensilios, despejar áreas, mantener mascotas fuera y señalar zonas con mayor actividad.</p></details>
+  <details><summary>¿Puedo solicitar solo control ecológico?</summary><p>Evaluamos la factibilidad según especie y nivel de infestación. Ofrecemos geles, trampas y exclusión.</p></details>
+  <details><summary>¿Emiten reportes para auditorías (BPM/HACCP)?</summary><p>Sí, entregamos reportes, mapas, MSDS y bitácoras de consumo y monitoreo.</p></details>
+  <details><summary>¿Cobertura en Panamá?</summary><p>Ciudad de Panamá y áreas cercanas. Consulta disponibilidad para el interior.</p></details>
 </section>
 
-<!-- CONTACTO + FORM -->
+<!-- CONTACTO + FORM + MAP -->
 <section id="contacto">
   <h2 class="sec">Solicita tu Inspección o Cotización</h2>
-  <p class="sub">Atendemos en Ciudad de Panamá y alrededores. Respuesta rápida por WhatsApp o correo.</p>
+  <p class="sub">Elige por dónde deseas recibir la respuesta: WhatsApp, correo o ambos.</p>
 
   <div class="formwrap">
     <form id="formCotiza">
@@ -346,6 +312,13 @@
 
       <label>Correo electrónico</label>
       <input type="email" name="correo" placeholder="nombre@correo.com" />
+
+      <label>Preferencia de envío</label>
+      <select name="preferencia" id="preferencia">
+        <option value="whatsapp" selected>WhatsApp</option>
+        <option value="correo">Correo</option>
+        <option value="ambos">Ambos (WhatsApp + Correo)</option>
+      </select>
 
       <label>Tipo de servicio</label>
       <select name="servicio">
@@ -364,19 +337,26 @@
       <textarea name="mensaje" placeholder="Cuéntanos la plaga, metraje aproximado y disponibilidad."></textarea>
 
       <div class="form-actions">
-        <button class="btn wsp" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp</button>
-        <button class="btn out" type="button" id="btnEmail"><i class="fa-solid fa-envelope"></i> Enviar por Correo</button>
+        <button class="btn wsp" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar</button>
+        <button class="btn out" type="button" id="btnLimpiar"><i class="fa-solid fa-eraser"></i> Limpiar</button>
       </div>
       <div class="hint">Al enviar aceptas ser contactado por nuestros técnicos para coordinar la visita.</div>
     </form>
 
     <div class="infoCard">
       <h3><i class="fa-solid fa-location-dot"></i> Cobertura</h3>
-      <p>Ciudad de Panamá: San Francisco, Bella Vista, Punta Pacífica, Costa del Este, Chanis, Parque Lefevre, Betania, Pan de Azúcar, Ancón, Albrook, Clayton, Tocumen y más.</p>
+      <p>Ciudad de Panamá: San Francisco, Bella Vista, Punta Pacífica, Costa del Este, Chanis, Parque Lefevre, Betania, Ancón, Albrook, Clayton, Tocumen y más.</p>
       <h3 style="margin-top:14px;"><i class="fa-solid fa-phone"></i> Contacto directo</h3>
       <p>Tel: <a href="tel:+50765127653">+507 6512-7653</a> · Instagram: <a href="https://instagram.com/omniacontrol" target="_blank">@omniacontrol</a></p>
       <p>Correo: <a href="mailto:info@omniacontrol.com">info@omniacontrol.com</a></p>
-      <p class="hint">Av. Domingo Díaz, Parque Industrial Las Olas, Of. 8-1, Ciudad de Panamá</p>
+      <p class="hint">Av. José Agustín Arango 253-60, Ciudad de Panamá</p>
+
+      <!-- MAPA -->
+      <div class="map-wrap" style="margin-top:12px">
+        <!-- Tu iframe de Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.5282016268501!2d-79.41794295574275!3d9.066162467997703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab550ee29d9811%3A0xeb106c0031a9d10e!2sAv.%20Jos%C3%A9%20Agust%C3%ADn%20Arango%20253-60%2C%20Panam%C3%A1%2C%20Provincia%20de%20Panam%C3%A1!5e1!3m2!1ses-419!2spa!4v1762183633312!5m2!1ses-419!2spa"
+          width="100%" height="300" style="border:0;border-radius:12px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -404,16 +384,16 @@
   <div class="copy">© <span id="y"></span> Omnia Control Inc. — omniacontrol.com</div>
 </footer>
 
-<!-- JS: Formulario a WhatsApp/Email -->
+<!-- JS: Form con selector (WhatsApp/Correo/Ambos) + animaciones -->
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
   function buildMsg(d){
     return `Hola Omnia Control,%0AQuiero una cotización:%0A`+
-      `Nombre: ${encodeURIComponent(d.nombre)}%0A`+
-      `Tel/WhatsApp: ${encodeURIComponent(d.telefono)}%0A`+
+      `Nombre: ${encodeURIComponent(d.nombre||'') }%0A`+
+      `Tel/WhatsApp: ${encodeURIComponent(d.telefono||'') }%0A`+
       `Correo: ${encodeURIComponent(d.correo||'') }%0A`+
-      `Servicio: ${encodeURIComponent(d.servicio)}%0A`+
+      `Servicio: ${encodeURIComponent(d.servicio||'') }%0A`+
       `Sector: ${encodeURIComponent(d.sector||'') }%0A`+
       `Mensaje: ${encodeURIComponent(d.mensaje||'') }%0A`;
   }
@@ -422,53 +402,25 @@
   form.addEventListener('submit', e=>{
     e.preventDefault();
     const d = Object.fromEntries(new FormData(form).entries());
-    const url = `https://wa.me/50765127653?text=${buildMsg(d)}`;
-    window.open(url,'_blank');
+    const pref = (d.preferencia||'whatsapp').toLowerCase();
+
+    // WhatsApp
+    if(pref==='whatsapp' || pref==='ambos'){
+      const wa = `https://wa.me/50765127653?text=${buildMsg(d)}`;
+      window.open(wa,'_blank');
+    }
+
+    // Correo
+    if(pref==='correo' || pref==='ambos'){
+      const subject = encodeURIComponent('Solicitud de cotización — Omnia Control');
+      const body = decodeURIComponent(buildMsg(d)).replaceAll('%0A','\n');
+      window.location.href = `mailto:info@omniacontrol.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    }
   });
 
-  document.getElementById('btnEmail').addEventListener('click', ()=>{
-    const d = Object.fromEntries(new FormData(form).entries());
-    const subject = encodeURIComponent('Solicitud de cotización — Omnia Control');
-    const body = decodeURIComponent(buildMsg(d)).replaceAll('%0A','\n');
-    window.location.href = `mailto:info@omniacontrol.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+  document.getElementById('btnLimpiar').addEventListener('click', ()=>{
+    form.reset();
   });
-</script>
-
-<!-- JSON-LD SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Omnia Control Inc.",
-  "url": "https://omniacontrol.com",
-  "logo": "https://omniacontrol.com/logo.png",
-  "image": "https://omniacontrol.com/logo.png",
-  "description": "Fumigación y control de plagas en Ciudad de Panamá. Técnicos certificados, planes para hogares e industrias.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Domingo Díaz, Parque Industrial Las Olas, Of. 8-1",
-    "addressLocality": "Ciudad de Panamá",
-    "addressCountry": "PA"
-  },
-  "areaServed": "Ciudad de Panamá",
-  "telephone": "+50765127653",
-  "sameAs": [
-    "https://instagram.com/omniacontrol"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"¿Los productos son seguros?","acceptedAnswer":{"@type":"Answer","text":"Usamos formulaciones aprobadas por autoridades panameñas; indicamos tiempos de reingreso y ventilación."}},
-    {"@type":"Question","name":"¿Cuánto dura el servicio?","acceptedAnswer":{"@type":"Answer","text":"En residencias entre 45 y 90 minutos; en industrias depende del metraje."}},
-    {"@type":"Question","name":"¿Garantizan el resultado?","acceptedAnswer":{"@type":"Answer","text":"Sí, con seguimiento y reingresos cuando corresponde según la plaga tratada."}},
-    {"@type":"Question","name":"¿Atienden urgencias?","acceptedAnswer":{"@type":"Answer","text":"Ofrecemos respuesta acelerada según agenda, incluso ventanas nocturnas."}}
-  ]
-}
 </script>
 
 </body>
